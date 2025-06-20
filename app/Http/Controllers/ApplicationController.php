@@ -37,6 +37,7 @@ class ApplicationController extends Controller
      */
     public function store(Request $request, $offerId)
     {
+
         $request->validate([
             'motivation_text' => 'nullable|string|max:1000',
             'motivation_file' => 'nullable|mimes:pdf,doc,docx|max:2048',

@@ -88,11 +88,12 @@
                             {{ \Illuminate\Support\Str::limit($app->motivation, 50) }}
                         @else
                             <span class="text-muted">Aucune</span>
+                            
                         @endif
                     </td>
                     <td>
                         @if($app->motivation_file)
-                            <a href="{{ asset('storage/' . $app->motivation_file) }}" target="_blank" class="btn btn-sm btn-outline-primary">📄 Télécharger</a>
+                            <a href="{{ asset('storage/app/public/' . $app->motivation_file) }}" target="_blank" class="btn btn-sm btn-outline-primary">📄 Télécharger</a>
                         @else
                             <span class="text-muted">Aucun</span>
                         @endif
